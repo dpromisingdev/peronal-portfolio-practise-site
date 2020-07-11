@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -1rem;
+}
+
+.container div {
+    flex: 1 1 0;
+    margin: 0 1rem;
+}
+
+.container .container__description {
+    padding: 2rem;
+}
+
+.container .container__description button {
+    padding: 0.5em 1rem;
+    margin: 1rem 0;
+    background-color: rgb(240, 79, 137);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    border: none;
+    border-radius: .2rem;
+    transition: transform 1s;
+    box-shadow: 3px 3px 10px lightgray;
+}
+
+.container .container__description button:hover {
+    background: linear-gradient(45deg, rgba(255, 198, 29), rgba(255, 167, 45));
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px lightgray;
+}
+
+.header {
+    background: url(./images/header-bg.png);
+    background-size: cover;
+}
+
+.bio {
+    background: url("./images/biography-bg.png");
+    background-size: cover;
+}
+
+.header__description p,
+.bio__description p {
+    padding: 1rem 0;
+}
+
+.pink-highlighter {
+    color: rgb(240, 79, 137)
+}
+
+.work-area {
+    background: url("./images/latest-work-bg.png");
+    background-size: cover;
+    text-align: center;
+    padding: 2rem 0 0 0;
+}
+
+.work-area div img {
+    transition: transform 1s;
+}
+
+.work-area div img:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.review {
+    background: url("./images/footer-bg.png");
+    background-size: cover;
+    padding: 2rem;
+}
+
+.review h3 {
+    color: rgb(240, 79, 137);
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.review h3::after {
+    content: '';
+    background: rgb(240, 79, 137);
+    height: .3rem;
+    width: 10rem;
+    display: block;
+    margin: 1rem auto;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -1rem;
+    padding: 2rem ;
+}
+
+.review-container div {
+    flex: 1 1 0;
+    margin: 0 1rem;
+    padding: 4rem .8rem .8rem;
+    background-color: #efefef;
+    position: relative;
+    text-align: center;
+}
+
+.review-container img {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    border: .5rem solid white;
+}
+
+.person {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+blockquote {
+    line-height: 1.5rem;
+    color: gray;
+}
+
+blockquote::before {
+    content: '\201C';
+    font-size: 3rem;
+    position: relative;
+    color: rgb(240, 79, 137);
+    line-height: 1.3rem;
+    bottom: -1rem;
+}
+
+blockquote::after {
+    content: '\201D';
+    font-size: 3rem;
+    position: relative;
+    color: rgb(240, 79, 137);
+    line-height: 1.3rem;
+    left: .1em;
+    bottom: -1rem;
+}
+
+.review-container h4 {
+    color: rgb(240, 79, 137);
+}
+
+h4 span {
+    font-size: .8rem;
+    color: black;
+}
+
+.cta {
+    text-align: center;
+    font-size: .8rem;
+    background: linear-gradient(165deg, rgb(255, 20, 111),rgb(240, 79, 137));
+    width: 25rem;
+    padding: 1.2rem 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: white;
+}
+
+.cta span {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    color: rgb(93, 93, 95);
+    font-size: .7rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem;
+        margin: -2rem 0;
+    } 
+
+    .container div {
+        margin: 1rem 0;
+    }
+
+    .container .container__description {
+        padding: 1rem;
+    }
+
+    .review h3::after {
+        width: 7rem;
+    }
+
+    .review-container {
+        flex-direction: column;
+        margin: -.5rem 0;
+        padding-top: 0;
+    }
+
+    .review-container div {
+        margin: 4rem 0 0 0;
+    }
+}
